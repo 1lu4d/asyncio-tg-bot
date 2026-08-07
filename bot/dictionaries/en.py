@@ -42,10 +42,10 @@ strings = {
     "LANGUAGE_CANCELLED": "Language selection cancelled.",
     "LANGUAGE_NOT_SUPPORTED": "That language is not supported.",
     "HELP_TEXT": (
-        "If you want to add your note to the others, type /submit or click the button below.\n"
-        "After that, you can send an image with a caption—or even a whole batch of captioned images at once—and they’ll all be forwarded to the admins.\n"
-        "The bot posts all approved phrases to the channel for easy viewing (link in the bot's description).\n"
-        "If you spot any bugs, glitches, or other issues, please message me at @GigaKatze.\n"
-        "The bot is still under development, so stay tuned for updates."    
+        "If you want to add your note to the others, type /submit or click the button below.\n\n"
+        "After that, you can send an image with a caption—or even a whole batch of captioned images at once—and they’ll all be forwarded to the <b>admins</b>.\n\n"
+        "The bot posts all approved notes to the channel for easy viewing (link in the bot's bio).\n\n"
+        "If you spot any <b>bugs</b>, <i>glitches</i>, or other <u>issues</u>, please message me at <tg-spoiler>@GigaKatze</tg-spoiler>.\n\n"
+        "The bot is still under development, so be aware."    
     ),
 }

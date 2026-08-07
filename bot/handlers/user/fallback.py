@@ -12,7 +12,7 @@ router = Router(name="fallback")
 @router.message(Command(commands=["help"]))
 async def unknown_command(message: Message, session: AsyncSession) -> None:
     strings = await get_user_strings(message, session)
-    await message.answer(strings["HELP_TEXT"] if strings else "No one will help")
+    await message.answer(strings["HELP_TEXT"] if strings else "No one will help", parse_mode="HTML")
 
 @router.message(F.text.startswith("/"))
 async def unknown_command(message: Message, session: AsyncSession) -> None:
