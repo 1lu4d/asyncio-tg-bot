@@ -106,6 +106,8 @@ async def random_note(message: Message, state: FSMContext, session: AsyncSession
         last_random_message_id=previous_message_id,
         last_random_message_ts=prev_ts,
     )
+    
+    print("Sent random note to @" + message.from_user.username)
 
 
 @router.message(F.text.in_(get_button_variants("BROWSE_NOTES_BUTTON")))
@@ -164,6 +166,7 @@ async def paginate_notes(callback: CallbackQuery, session: AsyncSession, state: 
         await callback.answer()
     finally:
         await state.update_data(browse_in_flight=False)
+    
 
 
 @router.callback_query(F.data == "ЧёСмотришь?Хакердофига?")
