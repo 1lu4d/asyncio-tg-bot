@@ -1,0 +1,44 @@
+strings = {
+    "LANGUAGE_NAME": "Русский",
+    "WELCOME": "Выберите опцию:",
+    "RANDOM_NOTE_BUTTON": "🎲 Случайная заметка",
+    "BROWSE_NOTES_BUTTON": "📚 Полистать заметки",
+    "UPLOAD_NOTE_BUTTON": "📤 Загрузить заметку",
+    "SEND_PHOTO_CAPTION_PROMPT": "Отправьте фото с подписью для заметки. /cancel для отмены.",
+    "PHOTO_CAPTION_REQUIRED": "Пожалуйста, отправь фото с подписью. Подпись обязательна.",
+    "NOTE_SENT_FOR_REVIEW": "Спасибо! Заметка отправлена на проверку.",
+    "UPLOAD_CANCELLED": "Загрузка отменена.",
+    "UPLOAD_WRONG_CONTENT_TYPE": "Пожалуйста, отправь фото с подписью (или /cancel).",
+    "LANGUAGE_BUTTON": "🌐 Язык",
+    "APPROVE_BUTTON": "✅ Одобрить",
+    "REJECT_BUTTON": "❌ Отклонить",
+    "ANNOTATE_BUTTON": "📝 Добавить заметку",
+    "UNKNOWN_COMMAND_REPLY": "Неизвестная команда. Что, что?",
+    "UNKNOWN_TEXT_REPLY": (
+        "Мы не знаем, что это такое. Доступные команды:\n\n"
+        "/start - показать главное меню\n"
+        "/submit - загрузить заметку(и)\n"
+        "/random - случайная заметка\n"
+        "/browse - полистать заметки\n"
+        "/language - выбрать язык\n"
+        "\nИли используй кнопки меню, если видишь их."
+    ),
+    "UNKNOWN_IMAGE_REPLY": "Для отправки изображений используйте /submit\nИли /start, чтобы показать меню с кнопками",
+    "NO_APPROVED_NOTES": "Пока нет одобренных заметок.",
+    "REACTION_SAVED": "Реакция сохранена!",
+    "PLEASE_WAIT": "Пожалуйста, подождите…",
+    "NO_MORE_NOTES": "Больше нет заметок.",
+    "NOTE_NOT_FOUND": "Заметка не найдена.",
+    "NOTE_ALREADY_REVIEWED": "Эта заметка уже проверена.",
+    "APPROVED": "Одобрено",
+    "REJECTED": "Отклонено",
+    "SEND_ANNOTATION_PROMPT": "Отправьте текст заметки для прикрепления к этой записи.",
+    "NOTE_ATTACHED": "Заметка прикреплена.",
+    "YOUR_NOTE_APPROVED": "Ваша заметка была одобрена!",
+    "YOUR_NOTE_REJECTED": "Ваша заметка была отклонена.",
+    "CAUSE_PREFIX": "Причина: ",
+    "LANGUAGE_PICK_PROMPT": "Выберите язык:",
+    "LANGUAGE_CHANGED": "Язык изменен на {language}.",
+    "LANGUAGE_CANCELLED": "Отмена выбора языка.",
+    "LANGUAGE_NOT_SUPPORTED": "Этот язык не поддерживается.",
+}
