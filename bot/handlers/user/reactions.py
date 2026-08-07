@@ -9,7 +9,7 @@ from aiogram import F, Router
 from aiogram.types import CallbackQuery
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from bot.database.repositories import reaction_repo
+from bot.database.repositories import note_repo, reaction_repo
 from bot.keyboards.user_kb import note_navigation_kb, reaction_only_kb
 from bot.utils.locale import get_user_strings
 
@@ -29,10 +29,12 @@ async def handle_reaction(callback: CallbackQuery, session: AsyncSession) -> Non
     )
 
     counts = await reaction_repo.get_counts(session, note_id)
+    page_text = None
     if callback.message and callback.message.reply_markup:
         inline_kb = callback.message.reply_markup.inline_keyboard
         if inline_kb and inline_kb[0] and inline_kb[0][0].callback_data.startswith("nav:"):
-            await callback.message.edit_reply_markup(reply_markup=note_navigation_kb(note_id, counts))
+            page_text = inline_kb[0][1].text if len(inline_kb[0]) > 1 else None
+            await callback.message.edit_reply_markup(reply_markup=note_navigation_kb(note_id, counts, page_text=page_text))
         else:
             await callback.message.edit_reply_markup(reply_markup=reaction_only_kb(note_id, counts))
 

@@ -27,7 +27,8 @@ router = Router(name="browse")
 @router.message(F.text.in_(get_button_variants("RANDOM_NOTE_BUTTON")))
 @router.message(Command(commands=["random"]))
 async def random_note(message: Message, state: FSMContext, session: AsyncSession) -> None:
-    """Send a random approved note.
+    """
+    Send a random approved note.
 
     If a prior random note message exists we delete it first so a new
     request never edits an unrelated/older bot message.
@@ -165,6 +166,6 @@ async def paginate_notes(callback: CallbackQuery, session: AsyncSession, state: 
         await state.update_data(browse_in_flight=False)
 
 
-@router.callback_query(F.data == "noop")
+@router.callback_query(F.data == "ЧёСмотришь?Хакердофига?")
 async def noop_callback(callback: CallbackQuery) -> None:
     await callback.answer()
