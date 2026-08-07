@@ -88,7 +88,7 @@ async def notify_author_about_approval(bot: Bot, session: AsyncSession, note: No
         message_text += f"\n\n{approved_caption}"
 
     try:
-        await bot.send_photo(author.tg_id, note.file_id, caption=message_text, message_effect_id="5046509860342981630")
+        await bot.send_photo(author.tg_id, note.file_id, caption=message_text, message_effect_id="5046509860389126442")
     except TelegramBadRequest as exc:
         logging.warning(
             "Failed to notify author %s about approval: %s",
@@ -110,7 +110,7 @@ async def notify_author_about_rejection(bot: Bot, session: AsyncSession, note: N
         message_text += f"\n\n{note.caption}"
 
     try:
-        await bot.send_photo(author.tg_id, note.file_id, caption=message_text, message_effect_id="5104995460515406168")
+        await bot.send_photo(author.tg_id, note.file_id, caption=message_text, message_effect_id="5104858069142078462")
     except TelegramBadRequest as exc:
         logging.warning(
             "Failed to notify author %s about rejection: %s",
