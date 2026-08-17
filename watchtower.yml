@@ -1,9 +1,0 @@
-services:
-  watchtower:
-    image: containrrr/watchtower:latest
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    environment:
-      - DOCKER_API_VERSION=1.55 # Force specific API version
-    command: --interval 86400 --cleanup --debug
-    restart: unless-stopped
