@@ -15,6 +15,9 @@ cp .env.example .env             # fill in BOT_TOKEN and ADMIN_IDS, (Optionally)
 python -m bot.main
 ```
 
+Note that on windows `source .venv/bin/activate` may not work,
+use `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` to bypass it
+
 ## Docker
 
 ```bash
@@ -27,6 +30,19 @@ channel and allowed to send messages
 
 The SQLite file is written to `./data/dictionary.db` on the host via
 the volume mount in `docker-compose.yml`, so it survives rebuilds.
+
+## Bot setup
+
+Bot also supports `/commands` so you can set them up in @BotFather like so
+
+```
+start - show the main menu
+help - show guide
+submit - upload notes
+language - select language
+random - show random note
+browse - browse notes
+```
 
 ## Structure
 
