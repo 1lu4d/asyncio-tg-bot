@@ -6,4 +6,4 @@ data/dictionary.db
 *.db
 .pytest_cache/
 .idea
-tests/
+tests
